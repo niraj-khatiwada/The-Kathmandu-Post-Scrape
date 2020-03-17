@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kathmandu Post Scrape</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');    
+.flex-items{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .card{
+        margin:2rem auto;
+    }
+    .Title{
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Girassol', cursive;
+            }
+    .card-img-top{
+        height: 190px;
+    }
+    .btn{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+    .title_img{
+        text-align: center;
+        margin-top: -15px;
+    }
+    .title_img img{
+        width: 100px;
+    }
+    
+</style>
+<body>
+    <br>
+    <div class="title_img"><img src="/media/tkp.png" alt=".img"></div>
+    <h1 class="Title">The Kathmandu Post Scrape</h1>
+    <div class="flex-items">
+        {% for row in items %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ row.thumbnail }}" alt="Card image cap">
+            <div class="card-body">
+            <a href="{{ row.link }}" style="color: inherit;"><h5 class="card-title">{{ forloop.counter }}) {{row.title}}</h5></a>
+            <p class="card-text">{{row.description}}</p>
+            <a href="{{ row.link }}" class="btn btn-primary">Read Details</a>
+            </div>
+    </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
