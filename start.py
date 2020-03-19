@@ -29,7 +29,7 @@ class Django():
 
     def run_server(self):
         try:
-            run_server = subprocess.run("cd C:/Users/niraj/Documents/Projects/Scraping Kathmandu Post/The_Kathmandu_Post_Scrape && python manage.py runsrver", stdout= subprocess.PIPE, stderr= subprocess.PIPE, shell= True)
+            run_server = subprocess.run("cd C:/Users/niraj/Documents/Projects/Scraping Kathmandu Post/The_Kathmandu_Post_Scrape && python manage.py runserver", stdout= subprocess.PIPE, stderr= subprocess.PIPE, shell= True)
             if run_server.returncode == 0:
                 print(f"-------------------------------\n{run_server.stdout.decode()}\n------Server started------\nReturn Code= {run_server.returncode}")
             else:
