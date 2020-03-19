@@ -42,6 +42,10 @@
     .title_img img{
         width: 100px;
     }
+    .date{
+        color: gray;
+    }
+    
     
 </style>
 <body>
@@ -54,6 +58,7 @@
             <img class="card-img-top" src="{{ row.thumbnail }}" alt="Card image cap">
             <div class="card-body">
             <a href="{{ row.link }}" style="color: inherit;"><h5 class="card-title">{{ forloop.counter }}) {{row.title}}</h5></a>
+            <p class="date">{{ row.date }}</p>
             <p class="card-text">{{row.description}}</p>
             <a href="{{ row.link }}" class="btn btn-dark">Read Details</a>
             </div>

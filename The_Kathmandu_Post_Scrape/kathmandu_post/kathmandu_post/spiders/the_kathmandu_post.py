@@ -17,13 +17,12 @@ class TheKathmanduPostSpider(scrapy.Spider):
 
         )
     def parse(self, response):
-        
+       
         for article in response.xpath("//article[@class='article-image ']"):
             yield{
                 'Title': article.xpath(".//a/h3/text()").get(),
+                'Date':  response.xpath("//div[@class='blocktop blocktop-date hidden-xs hidden-sm']/text()").get().strip(),
                 'Link': response.urljoin(article.xpath(".//a/@href").get()),
                 'Description': article.xpath(".//p/text()").get(),
                 'Thumbnail': article.xpath(".//div/figure/a/img/@data-src").get()
             }
-
-        

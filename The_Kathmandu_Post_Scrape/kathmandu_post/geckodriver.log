@@ -590,7 +590,8 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1584453814358	Marionette	INFO	Listening on port 57269
 1584453814414	Marionette	WARN	TLS certificate errors will be ignored for this session
-1584454487191	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\niraj\\AppData\\Local\\Temp\\rust_mozprofileDl8do1"
+Exiting due to channel error.
+	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\niraj\\AppData\\Local\\Temp\\rust_mozprofileDl8do1"
 *** You are running in headless mode.
 1584454487739	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
 1584454488425	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons

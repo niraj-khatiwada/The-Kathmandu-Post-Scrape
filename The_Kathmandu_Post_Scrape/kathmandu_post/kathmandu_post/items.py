@@ -12,6 +12,7 @@ class KathmanduPostItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     Title = scrapy.Field()
+    Date = scrapy.Field()
     Link = scrapy.Field()
     Thumbnail = scrapy.Field()
     

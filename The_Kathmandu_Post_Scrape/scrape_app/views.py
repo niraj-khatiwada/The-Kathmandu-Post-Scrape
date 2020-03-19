@@ -6,7 +6,7 @@ from .models import TheKathmanduPostScrapeModel
 # Create your views here.
 def scrape(request):
     context={
-        'items': TheKathmanduPostScrapeModel.objects.all(),
+        'items': TheKathmanduPostScrapeModel.objects.distinct("link", "date").all(),
         
     }
     return render(request, "homepage.html", context)

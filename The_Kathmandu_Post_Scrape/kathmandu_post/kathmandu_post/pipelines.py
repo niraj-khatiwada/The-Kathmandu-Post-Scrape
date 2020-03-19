@@ -15,7 +15,7 @@ class KathmanduPostPipeline(object):
 
     def process_item(self, item, spider):
         logging.warning("*******************Inserting data****************")
-        insert = TheKathmanduPostScrapeModel(title = item.get("Title"), link = item.get("Link"),description = item.get("Description"), thumbnail = item.get("Thumbnail"))
+        insert = TheKathmanduPostScrapeModel(title = item.get("Title"),date = item.get("Date"), link = item.get("Link"),description = item.get("Description"), thumbnail = item.get("Thumbnail"))
         insert.save()
         return item
 
