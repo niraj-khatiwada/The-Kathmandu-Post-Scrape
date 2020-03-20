@@ -7,6 +7,7 @@ class TheKathmanduPostScrapeModel(models.Model):
     link = models.URLField(max_length = 15000)
     description = models.TextField(max_length=15000)
     thumbnail = models.URLField(max_length = 15000)
+    crawled_time = models.DateTimeField(auto_now_add= True)
 
     def __str__(self):
         return self.title
