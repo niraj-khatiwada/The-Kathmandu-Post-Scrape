@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Kathmandu Post Scrape</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/7fdf96813a.js" crossorigin="anonymous"></script>
 
 </head>
 <style>
@@ -45,13 +47,27 @@
     .date{
         color: gray;
     }
-    
-    
+    .crawl_error_message{
+        text-align: center;
+        color: red;
+    }
+    i{
+        font-size: 200%;
+    }
 </style>
 <body>
     <br>
     <div class="title_img"><img src="/media/tkp.png" alt=".img"></div>
     <h1 class="Title">The Kathmandu Post Scrape</h1>
+    <!-- Crawl Error Message -->
+    {% if messages %}
+    <div class="crawl_error_message">
+        {% for message in messages %}
+        <i class="fas fa-exclamation-triangle"></i>
+        <h2>{{ message }}</h2>
+        {% endfor %}
+    </div>
+    {% endif %}
     <div class="flex-items">
         {% for row in items %}
         <div class="card" style="width: 18rem;">
