@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+
+.flex-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card {
+  content: '';
+  margin: 2rem auto;
+  box-shadow: 3px 2px 10px black;
+  transition: all 0.1s ease-in-out;
+  animation: card-zoom-animation 0.2s 1 ease-in-out;
+}
+
+@keyframes card-zoom-animation {
+  0% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  55% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.07);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  90% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card:hover {
+  -webkit-box-shadow: 13px 11px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 11px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 11px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.Title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Girassol', cursive;
+}
+.card-img-top {
+  height: 190px;
+}
+.btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.title_img {
+  display: grid;
+  justify-content: center;
+}
+.title_img img {
+  margin-top: -15px;
+  width: 100px;
+}
+
+.date {
+  color: gray;
+}
+.crawl_error_message {
+  text-align: center;
+  color: red;
+}
+i {
+  font-size: 200%;
+}

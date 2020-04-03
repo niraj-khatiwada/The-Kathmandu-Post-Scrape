@@ -1,6 +1,5 @@
 #Run this file to start the scraping process 
 
-
 import subprocess
 import time
 import webbrowser
